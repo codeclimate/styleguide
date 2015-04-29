@@ -24,12 +24,10 @@ course of your current work. Do not change code *only* to fix style.
 
 - Align `private`, `protected`, etc with other definitions (do not out-dent)
 - Avoid explicit `return`s
-- Avoid postfix conditionals
 - Avoid ternary operators
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 - Prefer `Hash#fetch` when a key is required, or defaulted
-- Sort all lists (arrays, hashes, `require`s, etc)
 - Use `%r{ }` for regular expressions containing more than one `/`
 - Use `%w[ ]` for word-arrays
 - Use `%{ }` for strings containing more than one double quote
@@ -45,7 +43,6 @@ course of your current work. Do not change code *only* to fix style.
 - Include a `.ruby_version`
 - Include a `bin/setup` script
 - Mirror `lib` in `spec`: `lib/foo/bar.rb => spec/foo/bar_spec.rb`
-- Use the `CC` namespace when it makes sense
 
 ## Specs
 
@@ -59,15 +56,6 @@ course of your current work. Do not change code *only* to fix style.
 - Write 4-phase tests with whitespace separating each phase
 
 ## Line length
-
-- No lines longer than 80 characters
-
-**vimrc**
-
-```vim
-set colorcolumn=+1
-set textwidth=80
-```
 
 - Break long argument lists between every argument
 - Break long method chains after the dot
