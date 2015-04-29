@@ -39,7 +39,7 @@ course of your current work. Do not change code *only* to fix style.
 - Prefer `Hash#fetch` when a key is required, or defaulted
 
   ```rb
-  # Bad, returns "bar" even for for { bar: nil } or { bar: false }
+  # Bad, returns "bar" even for { bar: nil } or { bar: false }
   foo[:bar] || "bar"
 
   # Good, returns "bar" only if :bar is not present
