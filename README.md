@@ -27,12 +27,53 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid ternary operators
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
+
+  ```rb
+  # Bad
+  Model.insert({ attr: "value" })
+
+  # Good
+  Model.insert(attr: "value")
+  ```
+
 - Prefer `Hash#fetch` when a key is required, or defaulted
+
+  ```rb
+  # Bad, returns "bar" even for for { bar: nil } or { bar: false }
+  foo[:bar] || "bar"
+
+  # Good, returns "bar" only if :bar is not present
+  foo.fetch(:bar) { "bar" }
+
+  # Bad, may result in a NoMethodError for NilClass far, far away
+  foo[:bar]
+
+  # Good, will result in a KeyError right here
+  foo.fetch(:bar)
+  ```
+
 - Use `%r{ }` for regular expressions containing more than one `/`
 - Use `%w[ ]` for word-arrays
 - Use `%{ }` for strings containing more than one double quote
 - Use `do`/`end` for multi-line blocks and `{ }` for single-line blocks
 - Use a trailing comma in all lists
+
+  ```rb
+  # Bad, adding a new entry requires a modification and addition
+  [
+    foo,
+    bar,
+    baz
+  ]
+
+  # Good, adding a new entry requires only an addition
+  [
+    foo,
+    bar,
+    baz,
+  ]
+  ```
+
 - Use double quotes for all strings
 - Use parentheses when calling methods with arguments, with the following
   exceptions: `puts`, `p`, `raise`, and class macros
