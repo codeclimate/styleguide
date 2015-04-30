@@ -24,6 +24,7 @@ course of your current work. Do not change code *only* to fix style.
 
 - Align `private`, `protected`, etc with other definitions (do not out-dent)
 - Avoid explicit `return`s
+- Avoid postfix conditionals
 - Avoid ternary operators
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
