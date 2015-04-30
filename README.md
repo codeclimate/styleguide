@@ -78,6 +78,23 @@ course of your current work. Do not change code *only* to fix style.
 - Use parentheses when calling methods with arguments, with the following
   exceptions: `puts`, `p`, `raise`, and class macros
 - Use parentheses when defining methods that take arguments
+- Don't use `else` if using `unless`. Switch the conditionals.
+  
+  ```ruby
+  # Bad
+  unless foo
+    one
+  else
+    two
+  end
+
+  # Good
+  if !foo
+    two
+  else
+    one
+  end
+  ```
 
 ## Project structure
 
