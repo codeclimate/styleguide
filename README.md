@@ -52,6 +52,7 @@ course of your current work. Do not change code *only* to fix style.
   foo.fetch(:bar)
   ```
 
+- Sort all lists (arrays, hashes, `require`s, etc)
 - Use `%r{ }` for regular expressions containing more than one `/`
 - Use `%w[ ]` for word-arrays
 - Use `%{ }` for strings containing more than one double quote
