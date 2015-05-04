@@ -79,6 +79,7 @@ course of your current work. Do not change code *only* to fix style.
 - Use parentheses when calling methods with arguments, with the following
   exceptions: `puts`, `p`, `raise`, and class macros
 - Use parentheses when defining methods that take arguments
+- Don't use `unless` with an `else` branch. Switch the conditionals.
 
 ## Project structure
 
