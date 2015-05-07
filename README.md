@@ -26,6 +26,33 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid explicit `return`s
 - Avoid postfix conditionals
 - Avoid ternary operators
+- Don't align tokens
+
+  ```rb
+  # Bad, adding, removing, or changing values will be both annoying and produce
+  # a noisy diff if it requires re-alignment
+  foo       = "foo
+  bar_thing = "thing"
+  other     = "other"
+
+  {
+    foo:       "foo"
+    bar_thing: "thing"
+    other:     "other"
+  }
+
+  # Good
+  foo = "foo
+  bar_thing = "thing"
+  other = "other"
+
+  {
+    foo: "foo"
+    bar_thing: "thing"
+    other: "other"
+  }
+  ```
+
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 
