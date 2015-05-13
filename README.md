@@ -31,7 +31,7 @@ course of your current work. Do not change code *only* to fix style.
   ```rb
   # Bad, adding, removing, or changing values will be both annoying and produce
   # a noisy diff if it requires re-alignment
-  foo       = "foo
+  foo       = "foo"
   bar_thing = "thing"
   other     = "other"
 
@@ -42,7 +42,7 @@ course of your current work. Do not change code *only* to fix style.
   }
 
   # Good
-  foo = "foo
+  foo = "foo"
   bar_thing = "thing"
   other = "other"
 
