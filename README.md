@@ -82,6 +82,7 @@ course of your current work. Do not change code *only* to fix style.
   exceptions: `puts`, `p`, `raise`, and class macros
 - Use parentheses when defining methods that take arguments
 - Don't use `unless` with an `else` branch. Switch the conditionals.
+- Do, or do not. There is no `try`.
 
 ## Project structure
 
