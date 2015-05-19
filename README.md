@@ -55,6 +55,26 @@ course of your current work. Do not change code *only* to fix style.
 
 - Sort all lists at the time of declaration (array items, hash keys, `require`
   statements, etc.)
+- Sort all method definitions within a file alphabetically by scope:
+  
+  ```ruby
+    class Foo
+      def self.d
+      end
+      
+      def a
+      end
+      
+      def c
+      end
+      
+      private
+      
+      def b
+      end
+    end
+  ```
+  
 - Use `%r{ }` for regular expressions containing more than one `/`
 - Use `%w[ ]` for word-arrays
 - Use `%{ }` for strings containing more than one double quote
