@@ -116,6 +116,7 @@ course of your current work. Do not change code *only* to fix style.
 - Include a `.ruby_version`
 - Include a `bin/setup` script
 - Mirror `lib` in `spec`: `lib/foo/bar.rb => spec/foo/bar_spec.rb`
+- Use the `CC` namespace when it makes sense
 
 ## Specs
 
