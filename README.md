@@ -26,6 +26,43 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid explicit `return`s
 - Avoid postfix conditionals
 - Avoid ternary operators
+- Define class methods with `def self.method_name`
+- Define classes with the following structure:
+    1. Class definition (`class User`)
+    2. Constants (`FOO=1`)
+    3. Class method calls (DSLs, etc) (`attr_reader :foo`)
+    4. Class method definitions (`def self.foo`)
+    5. Public instance methods (`def foo`)
+    6. Protected instance methods (`def foo` after `protected` keyword)
+    7. Private instance methods (`def foo` after `private` keyword)
+  
+    Example
+   ```rb
+   class User
+       TIME_ALLOWED_INACTIVE = 10.minutes
+       
+       attr_reader :name, :address
+       
+       def self.create(attrs)
+           # ...
+       end
+       
+       def send_email(email)
+           # ...
+       end
+       
+       protected
+       
+       def protected_call_here
+       end
+       
+       private
+       
+       def private_call_here
+       end
+   end
+   ```
+
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 
