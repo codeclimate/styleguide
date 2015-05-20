@@ -83,8 +83,12 @@ course of your current work. Do not change code *only* to fix style.
 - Use parentheses when defining methods that take arguments
 - Don't use `unless` with an `else` branch. Switch the conditionals.
 - Do, or do not. There is no `try`.
-- Use `TerribleMorningException = Class.new(StandardError)` style of defining error classes when no added functionality needed
+- Define error classes with `Class.new` where no subclass behavior required:
 
+  ```rb
+  TerribleMorningException = Class.new(StandardError)
+  ```
+  
 ## Project structure
 
 - Include a `.ruby_version`
