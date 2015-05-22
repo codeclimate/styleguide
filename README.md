@@ -35,9 +35,6 @@ course of your current work. Do not change code *only* to fix style.
        # Constants
        TIME_ALLOWED_INACTIVE = 10.minutes
        
-       # Constants like class names (error classes e.g.)
-       FakeUserError = Class.new(StandardError)
-       
        # Class method calls / DSL calls
        attr_reader :name, :address
        
@@ -61,6 +58,12 @@ course of your current work. Do not change code *only* to fix style.
        private
        
        def private_call_here
+       end
+       
+      # Inner classes
+       FakeUserError = Class.new(StandardError)
+       
+       class InnerClassMagic
        end
    end
    ```
