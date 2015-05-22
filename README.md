@@ -115,7 +115,13 @@ course of your current work. Do not change code *only* to fix style.
   ```rb
   TerribleMorningException = Class.new(StandardError)
   ```
-  
+
+## Namespaces
+
+- Services (a unit of code that runs as a process) should use a `CC::{service_name}` namespace
+- Library code which is domain specific (e.g. a Code Climate API or reads Code Climate config files) should use a `CC:{library_name}` namespace.
+- Other library code (a gem or helper library) generally does not need to be namespaced (e.g. GitClient or Minidoc)
+
 ## Project structure
 
 - Include a `.ruby_version`
