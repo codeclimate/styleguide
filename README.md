@@ -27,6 +27,7 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid postfix conditionals
 - Avoid ternary operators
 - Define class methods with `def self.method_name`
+- Do not use an inner class outside of the class that defines it
 - Define classes with the following structure (comments are for the clarity of example and are not required):
 
     Example
