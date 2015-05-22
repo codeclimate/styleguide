@@ -27,35 +27,37 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid postfix conditionals
 - Avoid ternary operators
 - Define class methods with `def self.method_name`
-- Define classes with the following structure:
-    1. Class definition (`class User`)
-    2. Constants (`FOO=1`)
-    3. Class method calls (DSLs, etc) (`attr_reader :foo`)
-    4. Class method definitions (`def self.foo`)
-    5. Public instance methods (`def foo`)
-    6. Protected instance methods (`def foo` after `protected` keyword)
-    7. Private instance methods (`def foo` after `private` keyword)
-  
+- Define classes with the following structure (comments are for the clarity of example and are not required):
+
     Example
    ```rb
    class User
+       # Constants
        TIME_ALLOWED_INACTIVE = 10.minutes
        
+       # Constants like class names (error classes e.g.)
+       FakeUserError = Class.new(StandardError)
+       
+       # Class method calls / DSL calls
        attr_reader :name, :address
        
+       # Class method definitions
        def self.create(attrs)
            # ...
        end
        
+       # Instance methods
        def send_email(email)
            # ...
        end
        
+       # protected methods
        protected
        
        def protected_call_here
        end
        
+       # private methods
        private
        
        def private_call_here
