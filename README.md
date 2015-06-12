@@ -26,6 +26,48 @@ course of your current work. Do not change code *only* to fix style.
 - Avoid explicit `return`s
 - Avoid postfix conditionals
 - Avoid ternary operators
+- Define class methods with `def self.method_name`
+- Do not use an inner class outside of the class that defines it
+- Define classes with the following structure (comments are for the clarity of example and are not required):
+
+    Example
+   ```rb
+   class User
+       # Constants
+       TIME_ALLOWED_INACTIVE = 10.minutes
+
+       # Class method calls / DSL calls
+       attr_reader :name, :address
+
+       # Class method definitions
+       def self.create(attrs)
+           # ...
+       end
+
+       # Instance methods
+       def send_email(email)
+           # ...
+       end
+
+       # protected methods
+       protected
+
+       def protected_call_here
+       end
+
+       # private methods
+       private
+
+       def private_call_here
+       end
+
+      # Inner classes
+       FakeUserError = Class.new(StandardError)
+
+       class InnerClassMagic
+       end
+   end
+   ```
 - Don't align tokens
 
   ```rb
@@ -52,7 +94,6 @@ course of your current work. Do not change code *only* to fix style.
     other: "other"
   }
   ```
-
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 
