@@ -35,40 +35,65 @@ course of your current work. Do not change code *only* to fix style.
    class User
        # Constants
        TIME_ALLOWED_INACTIVE = 10.minutes
-       
+
        # Class method calls / DSL calls
        attr_reader :name, :address
-       
+
        # Class method definitions
        def self.create(attrs)
            # ...
        end
-       
+
        # Instance methods
        def send_email(email)
            # ...
        end
-       
+
        # protected methods
        protected
-       
+
        def protected_call_here
        end
-       
+
        # private methods
        private
-       
+
        def private_call_here
        end
-       
+
       # Inner classes
        FakeUserError = Class.new(StandardError)
-       
+
        class InnerClassMagic
        end
    end
    ```
+- Don't align tokens
 
+  ```rb
+  # Bad, adding, removing, or changing values will be both annoying and produce
+  # a noisy diff if it requires re-alignment
+  foo       = "foo"
+  bar_thing = "thing"
+  other     = "other"
+
+  {
+    foo:       "foo"
+    bar_thing: "thing"
+    other:     "other"
+  }
+
+  # Good
+  foo = "foo"
+  bar_thing = "thing"
+  other = "other"
+
+  {
+    foo: "foo"
+    bar_thing: "thing"
+    other: "other"
+  }
+  ```
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 
@@ -126,6 +151,17 @@ course of your current work. Do not change code *only* to fix style.
 - Use parentheses when defining methods that take arguments
 - Don't use `unless` with an `else` branch. Switch the conditionals.
 - Do, or do not. There is no `try`.
+- Define error classes with `Class.new` where no subclass behavior required:
+
+  ```rb
+  TerribleMorningException = Class.new(StandardError)
+  ```
+
+## Namespaces
+
+- Services (a unit of code that runs as a process) should use a `CC::{service_name}` namespace
+- Library code which is domain specific (e.g. a Code Climate API or reads Code Climate config files) should use a `CC:{library_name}` namespace.
+- Other library code (a gem or helper library) generally does not need to be namespaced (e.g. GitClient or Minidoc)
 
 ## Project structure
 
