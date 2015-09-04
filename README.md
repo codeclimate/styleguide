@@ -182,6 +182,21 @@ course of your current work. Do not change code *only* to fix style.
 
 ## Line length
 
+- Prefer lines no longer than 80 characters
+
+**vimrc**
+
+```vim
+set colorcolumn=+1
+set textwidth=80
+```
+
+**sublime**
+
+```
+"rulers": [ 80 ]
+```
+
 - Break long argument lists between every argument
 - Break long method chains after the dot
 
