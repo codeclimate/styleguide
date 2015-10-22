@@ -20,6 +20,15 @@ course of your current work. Do not change code *only* to fix style.
 - **Avoid**/**prefer**: if not following these, the burden is on you to convince
   your reviewer why
 
+## Rubocop
+
+Every project should start with the `rubocop.yml` present here. It should
+enforce the styles defined here.
+
+If a change or addition comes up in the course of that project that is not
+project-specific, it should be made in both places. Periodically, projects must
+"sync" their `.rubocop.yml` with the one present here.
+
 ## General
 
 - Align `private`, `protected`, etc with other definitions (do not out-dent)
