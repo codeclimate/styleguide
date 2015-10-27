@@ -51,6 +51,11 @@ Style/GlobalVars:
   - "$mongo"
   - "$rollout"
 
+# Allow $! in config/initializers
+Style/SpecialGlobalVars:
+  Exclude:
+  - config/initializers/**/*
+
 # We have common cases where has_ and have_ make sense
 Style/PredicateName:
   Enabled: true
