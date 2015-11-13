@@ -68,6 +68,10 @@ Style/PercentLiteralDelimiters:
     "%w": []
     "%W": []
 
+# Allow "trivial" accessors when defined as a predicate? method
+Style/TrivialAccessors:
+  AllowPredicates: true
+
 ################################################################################
 # Rails - disable things because we're primarily non-rails
 ################################################################################
