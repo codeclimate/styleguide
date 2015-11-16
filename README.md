@@ -166,6 +166,14 @@ project-specific, it should be made in both places. Periodically, projects must
   TerribleMorningException = Class.new(StandardError)
   ```
 
+- Use a leading underscore when defining instance variables for memoization
+
+  ```
+  def foo
+    @_foo ||= "bar"
+  end
+  ```
+
 ## Namespaces
 
 - Services (a unit of code that runs as a process) should use a `CC::{service_name}` namespace
