@@ -9,7 +9,8 @@ to code in your own preferred style and not.
 
 Any PR comments regarding violations of the guidelines here should be addressed
 immediately and without discussion. If you disagree with a guideline, propose a
-change in a PR. Once the team has settled on a guideline, it must be followed.
+change in a PR to this repo. Once the team has settled on a guideline, it must
+be followed.
 
 Existing code may be fixed for style if, and only if, it must be touched in the
 course of your current work. Do not change code *only* to fix style.
