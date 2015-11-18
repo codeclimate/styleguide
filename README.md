@@ -164,7 +164,7 @@ project-specific, it should be made in both places. Periodically, projects must
 - Use parentheses when defining methods that take arguments
 - Don't use `unless` with an `else` branch. Switch the conditionals.
 - Do, or do not. There is no `try`.
-- Define error classes with `Class.new` where no subclass behavior required:
+- Define error classes with `Class.new` where no subclass behavior is required:
 
   ```rb
   TerribleMorningException = Class.new(StandardError)
