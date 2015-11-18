@@ -9,7 +9,8 @@ to code in your own preferred style and not.
 
 Any PR comments regarding violations of the guidelines here should be addressed
 immediately and without discussion. If you disagree with a guideline, propose a
-change in a PR. Once the team has settled on a guideline, it must be followed.
+change in a PR to this repo. Once the team has settled on a guideline, it must
+be followed.
 
 Existing code may be fixed for style if, and only if, it must be touched in the
 course of your current work. Do not change code *only* to fix style.
@@ -37,46 +38,49 @@ project-specific, it should be made in both places. Periodically, projects must
 - Avoid ternary operators
 - Define class methods with `def self.method_name`
 - Do not use an inner class outside of the class that defines it
-- Define classes with the following structure (comments are for the clarity of example and are not required):
+- Define classes with the following structure (comments are for the clarity of
+  the example and are not required):
 
-    Example
-   ```rb
-   class User
-       # Constants
-       TIME_ALLOWED_INACTIVE = 10.minutes
+  Example
 
-       # Class method calls / DSL calls
-       attr_reader :name, :address
+  ```rb
+  class User
+    # Constants
+    TIME_ALLOWED_INACTIVE = 10.minutes
 
-       # Class method definitions
-       def self.create(attrs)
-           # ...
-       end
+    # Class method calls / DSL calls
+    attr_reader :name, :address
 
-       # Instance methods
-       def send_email(email)
-           # ...
-       end
+    # Class method definitions
+    def self.create(attrs)
+      # ...
+    end
 
-       # protected methods
-       protected
+    # Instance methods
+    def send_email(email)
+      # ...
+    end
 
-       def protected_call_here
-       end
+    # protected methods
+    protected
 
-       # private methods
-       private
+    def protected_call_here
+    end
 
-       def private_call_here
-       end
+    # private methods
+    private
 
-      # Inner classes
-       FakeUserError = Class.new(StandardError)
+    def private_call_here
+    end
 
-       class InnerClassMagic
-       end
-   end
-   ```
+    # Inner classes
+    FakeUserError = Class.new(StandardError)
+
+    class InnerClassMagic
+    end
+  end
+  ```
+
 - Don't align tokens
 
   ```rb
@@ -160,7 +164,7 @@ project-specific, it should be made in both places. Periodically, projects must
 - Use parentheses when defining methods that take arguments
 - Don't use `unless` with an `else` branch. Switch the conditionals.
 - Do, or do not. There is no `try`.
-- Define error classes with `Class.new` where no subclass behavior required:
+- Define error classes with `Class.new` where no subclass behavior is required:
 
   ```rb
   TerribleMorningException = Class.new(StandardError)
@@ -168,9 +172,12 @@ project-specific, it should be made in both places. Periodically, projects must
 
 ## Namespaces
 
-- Services (a unit of code that runs as a process) should use a `CC::{service_name}` namespace
-- Library code which is domain specific (e.g. a Code Climate API or reads Code Climate config files) should use a `CC:{library_name}` namespace.
-- Other library code (a gem or helper library) generally does not need to be namespaced (e.g. GitClient or Minidoc)
+- Services (a unit of code that runs as a process) should use a
+  `CC::{service_name}` namespace
+- Library code which is domain specific (e.g. a Code Climate API or reads Code
+  Climate config files) should use a `CC::{library_name}` namespace.
+- Other library code (a gem or helper library) generally does not need to be
+  namespaced (e.g. `GitClient` or `Minidoc`)
 
 ## Project structure
 
