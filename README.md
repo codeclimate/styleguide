@@ -38,46 +38,49 @@ project-specific, it should be made in both places. Periodically, projects must
 - Avoid ternary operators
 - Define class methods with `def self.method_name`
 - Do not use an inner class outside of the class that defines it
-- Define classes with the following structure (comments are for the clarity of example and are not required):
+- Define classes with the following structure (comments are for the clarity of
+  the example and are not required):
 
-    Example
-   ```rb
-   class User
-       # Constants
-       TIME_ALLOWED_INACTIVE = 10.minutes
+  Example
 
-       # Class method calls / DSL calls
-       attr_reader :name, :address
+  ```rb
+  class User
+    # Constants
+    TIME_ALLOWED_INACTIVE = 10.minutes
 
-       # Class method definitions
-       def self.create(attrs)
-           # ...
-       end
+    # Class method calls / DSL calls
+    attr_reader :name, :address
 
-       # Instance methods
-       def send_email(email)
-           # ...
-       end
+    # Class method definitions
+    def self.create(attrs)
+      # ...
+    end
 
-       # protected methods
-       protected
+    # Instance methods
+    def send_email(email)
+      # ...
+    end
 
-       def protected_call_here
-       end
+    # protected methods
+    protected
 
-       # private methods
-       private
+    def protected_call_here
+    end
 
-       def private_call_here
-       end
+    # private methods
+    private
 
-      # Inner classes
-       FakeUserError = Class.new(StandardError)
+    def private_call_here
+    end
 
-       class InnerClassMagic
-       end
-   end
-   ```
+    # Inner classes
+    FakeUserError = Class.new(StandardError)
+
+    class InnerClassMagic
+    end
+  end
+  ```
+
 - Don't align tokens
 
   ```rb
