@@ -101,7 +101,3 @@ Style/ClassAndModuleChildren:
 Style/BlockDelimiters:
   Exclude:
   - spec/**/*
-
-Style/Blocks:
-  Exclude:
-  - spec/**/*
