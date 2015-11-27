@@ -187,6 +187,22 @@ project-specific, it should be made in both places. Periodically, projects must
 
 ## Specs
 
+**A note about the RSpec DSL**: we have rules below about avoiding some of
+RSpec's DSL methods like `let`, `subject`, etc. These DSL methods can be easily
+abused to result in [obfuscated and brittle tests][lets-not], hence the
+*Avoid*/*Prefer* rules. That said, they can be fine to use in many
+circumstances, therefore some clarification of the nuance involved is
+worthwhile.
+
+[lets-not]: https://robots.thoughtbot.com/lets-not
+
+The overall guiding principal behind these rules is the following:
+
+A developer should be able to view any `it` block in isolation --without its
+`context`, without its `before`, without any `let`s it uses-- and understand
+**exactly** what's going on. If you can accomplish this while using the RSpec
+DSL methods, it's probably fine.
+
 - Avoid `described_class`
 - Avoid `let`, and `subject` (prefer factory methods)
 - Place `describe` within the namespace(s) for inner classes
