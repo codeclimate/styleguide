@@ -196,7 +196,7 @@ worthwhile.
 
 [lets-not]: https://robots.thoughtbot.com/lets-not
 
-The overall guiding principal behind these rules is the following:
+The overall guiding principle behind these rules is the following:
 
 A developer should be able to view any `it` block in isolation --without its
 `context`, without its `before`, without any `let`s it uses-- and understand
