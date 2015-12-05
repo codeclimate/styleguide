@@ -170,6 +170,19 @@ project-specific, it should be made in both places. Periodically, projects must
   TerribleMorningException = Class.new(StandardError)
   ```
 
+- Don't access instance variables directly outside of `#initialize`, (i.e define
+  private `attr_reader`s as needed)
+
+  The upcase forums has a good discussion [here][forum]. Ultimately, we choose
+  this for the following:
+
+  - Typo protection (typoed `@ivar` is `nil`, typoed `#ivar` is
+    `NoMethodError`). Such a typo has actually caused a production incident.
+  - Forcing mechanism against adding mutation by requiring an explicit writer or
+    accessor be added to accomplish it.
+
+  [forum]: https://forum.upcase.com/t/using-instance-variables-vs-attribute-accessors/1788/12
+
 ## Namespaces
 
 - Services (a unit of code that runs as a process) should use a
