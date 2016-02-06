@@ -380,24 +380,26 @@ set shiftwidth=2
   having to adjust indentation. Notice the following:
 
   ```hs
-  -- Bad. If I rename foo to longFoo, I have to adjust all four lines
+  -- Bad
   foo :: String
       -> Int
       -> Int
   foo = undefined
 
+  -- If I rename foo to longFoo, I have to adjust all four lines
   longFoo :: String
           -> Int
           -> Int
   longFoo = undefined
 
-  -- Good. If I rename foo to longFoo, I only have to adjust the unavoidable two
+  -- Good
   foo
       :: String
       -> Int
       -> Int
   foo = undefined
 
+  -- If I rename foo to longFoo, I only have to adjust the unavoidable two
   longFoo
       :: String
       -> Int
