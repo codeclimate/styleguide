@@ -376,6 +376,37 @@ set shiftwidth=2
   exists = fmap (> 0) . count
   ```
 
+  **Reasoning**: in general, one should be able to rename an identifier without
+  having to adjust indentation. Notice the following:
+
+  ```hs
+  -- Bad. If I rename foo to longFoo, I have to adjust all four lines
+  foo :: String
+      -> Int
+      -> Int
+  foo = undefined
+
+  longFoo :: String
+          -> Int
+          -> Int
+  longFoo = undefined
+
+  -- Good. If I rename foo to longFoo, I only have to adjust the unavoidable two
+  foo
+      :: String
+      -> Int
+      -> Int
+  foo = undefined
+
+  longFoo
+      :: String
+      -> Int
+      -> Int
+  longFoo = undefined
+  ```
+
+  *Comma-first* style is recommended below for the same reason.
+
 - Use only one pragma statement per line.
 
   ```hs
