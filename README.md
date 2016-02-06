@@ -422,8 +422,8 @@ set shiftwidth=2
       deriving Show
 
   -- sum types
-  data HTTPStatus =
-      | OK
+  data HTTPStatus
+      = OK
       | BadRequest
       | ServerError
       deriving Eq
