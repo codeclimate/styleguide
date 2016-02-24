@@ -26,7 +26,10 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 # Use a trailing comma to keep diffs clean when elements are inserted or removed
-Style/TrailingComma:
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
 
 # We avoid GuardClause because it can result in "suprise return"
