@@ -29,6 +29,9 @@ Style/StringLiterals:
 Style/TrailingComma:
   EnforcedStyleForMultiline: comma
 
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
 # We avoid GuardClause because it can result in "suprise return"
 Style/GuardClause:
   Enabled: false
