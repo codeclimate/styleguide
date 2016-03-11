@@ -81,7 +81,11 @@ Style/Next:
 # We think it's OK to use the "extend self" module pattern
 Style/ModuleFunction:
   Enabled: false
-  
+
+# Disallow extra spacing for token alignment
+Style/ExtraSpacing:
+  AllowForAlignment: false
+
 ################################################################################
 # Performance
 ################################################################################
