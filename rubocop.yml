@@ -57,10 +57,10 @@ Style/GlobalVars:
   - "$mongo"
   - "$rollout"
 
-# Allow $! in config/initializers
+# Using english names requires loading an extra module, which is annoying, so
+# we prefer the perl names for consistency.
 Style/SpecialGlobalVars:
-  Exclude:
-  - config/initializers/**/*
+  EnforcedStyle: use_perl_names
 
 # We have common cases where has_ and have_ make sense
 Style/PredicateName:
