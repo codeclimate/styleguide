@@ -107,6 +107,7 @@ project-specific, it should be made in both places. Periodically, projects must
     other: "other"
   }
   ```
+
 - Don't use `self` unless required (`self.class` or attribute assignment)
 - Don't use redundant braces when passing hash arguments
 
@@ -229,14 +230,14 @@ DSL methods, it's probably fine.
 
 - Prefer lines no longer than 80 characters
 
-**vimrc**
+### vimrc
 
 ```vim
 set colorcolumn=+1
 set textwidth=80
 ```
 
-**sublime**
+### sublime
 
 ```
 "rulers": [ 80 ]
@@ -250,7 +251,7 @@ set textwidth=80
 - No trailing whitespace
 - Use 2-space indentation
 
-**vimrc**
+### vimrc
 
 ```vim
 set expandtab

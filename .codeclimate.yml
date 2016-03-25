@@ -1,0 +1,9 @@
+engines:
+  markdownlint:
+    enabled: true
+    checks:
+      MD024: # Allow multiple headings of the same name
+        enabled: false
+ratings:
+  paths:
+    - README.md
