@@ -163,6 +163,9 @@ project-specific, it should be made in both places. Periodically, projects must
 
   [forum]: https://forum.upcase.com/t/using-instance-variables-vs-attribute-accessors/1788/12
 
+- Break long argument lists between every argument
+- Break long method chains after the dot
+
 ## Namespaces
 
 - Services (a unit of code that runs as a process) should use a
@@ -209,11 +212,21 @@ DSL methods, it's probably fine.
 
 - Prefer lines no longer than 80 characters
 
+## Whitespace
+
+- No trailing whitespace
+- Use 2-space indentation
+
+## Editor configuration
+
 ### vimrc
 
 ```vim
 set colorcolumn=+1
 set textwidth=80
+set expandtab
+set list listchars=tab:»·,trail:·
+set shiftwidth=2
 ```
 
 ### sublime
@@ -221,23 +234,3 @@ set textwidth=80
 ```
 "rulers": [ 80 ]
 ```
-
-- Break long argument lists between every argument
-- Break long method chains after the dot
-
-## Whitespace
-
-- No trailing whitespace
-- Use 2-space indentation
-
-### vimrc
-
-```vim
-set expandtab
-set list listchars=tab:»·,trail:·
-set shiftwidth=2
-```
-
-- No blank lines after opening or before closing a block
-- No blank lines after starting or before closing a class or module definition
-
