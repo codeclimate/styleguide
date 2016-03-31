@@ -14,6 +14,7 @@ module.exports = {
     "no-shadow-restricted-names": 2,
     "no-undef": 2,
     "no-use-before-define": 2,
+    "quotes": [2, "double", "avoid-escape"],
     "radix": 2,
     "semi": 2,
     "space-infix-ops": 2,
