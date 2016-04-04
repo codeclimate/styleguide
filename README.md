@@ -26,6 +26,7 @@ course of your current work. Do not change code *only* to fix style.
 This repository includes written guides & relevant linter configuration for the
 following languages:
 
-- [Ruby](ruby/README.md)
-- [JavaScript](javascript/README.md)
 - [Haskell](haskell/README.md)
+- [HTML](markup/README.md)
+- [JavaScript](javascript/README.md)
+- [Ruby](ruby/README.md)
