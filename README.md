@@ -27,6 +27,6 @@ This repository includes written guides & relevant linter configuration for the
 following languages:
 
 - [Haskell](haskell/README.md)
-- [HTML](markup/README.md)
+- [HTML](html/README.md)
 - [JavaScript](javascript/README.md)
 - [Ruby](ruby/README.md)
