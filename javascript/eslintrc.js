@@ -14,7 +14,7 @@ module.exports = {
     "eqeqeq": [2, "allow-null"],
     "no-shadow-restricted-names": 2,
     "no-undef": 2,
-    "no-unused-vars": 2,
+    "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
     "no-use-before-define": 2,
     "quotes": [2, "double", "avoid-escape"],
     "radix": 2,
