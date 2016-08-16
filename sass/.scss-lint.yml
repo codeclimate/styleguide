@@ -1,0 +1,11 @@
+linters:
+  ChainedClasses:
+    enabled: false
+  PropertySortOrder:
+    # we sort properties alphabetically, which is not supported
+    enabled: false
+  SelectorFormat:
+    # http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+    convention: hyphenated_BEM
+  StringQuotes:
+    style: double_quotes
