@@ -100,6 +100,20 @@ Style/ExtraSpacing:
 Style/AndOr:
   EnforcedStyle: conditionals
 
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/AlignHash:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+# This has the behavior we want, but it has a bug in it which produces a lot of false positives
+# https://github.com/bbatsov/rubocop/issues/3462
+# MultilineMethodCallBraceLayout:
+#   EnforcedStyle: new_line
+
 ################################################################################
 # Performance
 ################################################################################
