@@ -8,6 +8,12 @@ Metrics/LineLength:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
 ################################################################################
 # Style
 ################################################################################
@@ -134,14 +140,6 @@ Rails/TimeZone:
 ################################################################################
 # Specs - be more lenient on length checks and block styles
 ################################################################################
-
-Metrics/ModuleLength:
-  Exclude:
-  - spec/**/*
-
-Metrics/MethodLength:
-  Exclude:
-  - spec/**/*
 
 Style/ClassAndModuleChildren:
   Exclude:
