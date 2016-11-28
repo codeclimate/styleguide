@@ -199,7 +199,6 @@ A developer should be able to view any `it` block in isolation --without its
 **exactly** what's going on. If you can accomplish this while using the RSpec
 DSL methods, it's probably fine.
 
-- Avoid `described_class`
 - Avoid `let`, and `subject` (prefer factory methods)
 - Place `describe` within the namespace(s) for inner classes
 - Prefer `expect` syntax when possible
