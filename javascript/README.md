@@ -2,9 +2,12 @@
 
 ## ESLint
 
-This repo contains an `eslintrc.js` file that should be included (as
-`.eslintrc.js`) in each project. Periodically, a repo's `.eslintrc.js` file
-should be synced with the one here.
+This repo contains an `eslintrc.base.js` file specifying rules useful for all
+projects, as well as an `eslintrc.es6.js` with rules specific to ES6 projects.
+
+We suggest creating an `.eslintrc.js` in your own project based on the
+`eslintrc.example.js` file here, using `codeclimate prepare` to pull in the base
+rules (and the ES6 rules if appropriate).
 
 ### Variable and Function Names
 
@@ -46,8 +49,8 @@ api.getModel("id").then(function(data) {
 ### ECMAScript 6
 
 There is an additional set of ESLint rules we use for ES6 code: these are in
-`eslintrc-es6.js`, and can be included into the main `.eslintrc.js` file in ES6
-projects with an `"extends"` directive.
+`eslintrc.es6.js`, and can be included into your `.eslintrc.js` with an
+`"extends"` directive.
 
 The rules there are mostly self explanatory, with one perhaps requiring an
 explanatory note: `=>` functions are preferred over the `var self = this;`

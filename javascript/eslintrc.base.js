@@ -1,10 +1,4 @@
 module.exports = {
-  "env": {
-    "node": true,     // When in a backend context
-    "browser": true,  // When in a web context
-    "jquery": true,   // When in a web context
-    "es6": true,      // When using ES6 features
-  },
   "rules": {
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "camelcase": [2, { "properties": "always" }],
@@ -23,9 +17,4 @@ module.exports = {
     "space-infix-ops": 2,
     "strict": 0,
   },
-  /**
-   *  globals should be defined per file when possible. Use the directive here
-   *  when there are project-level globals (such as jquery)
-   */
-  "globals": {},
 };
