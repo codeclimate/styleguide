@@ -1,13 +1,33 @@
 # Ruby
 
-## Rubocop
+## RuboCop
 
 Every project should start with the `rubocop.yml` present here. It should
 enforce the styles defined here.
 
+It should be pulled in via [external configuration]:
+
+```
+prepare:
+  fetch:
+  - url: "https://raw.githubusercontent.com/codeclimate/styleguide/master/ruby/rubocop.yml"
+    path: "base_rubocop.yml"
+
+engines:
+  rubocop:
+    enabled: true
+```
+
+And the project should have a `.rubocop.yml` that looks like:
+
+```
+inherit_from: base_rubocop.yml
+
+# project-specific configuration...
+```
+
 If a change or addition comes up in the course of that project that is not
-project-specific, it should be made in both places. Periodically, projects must
-"sync" their `.rubocop.yml` with the one present here.
+project-specific, it should be made in the styleguide.
 
 ## General
 
@@ -233,3 +253,5 @@ set shiftwidth=2
 ```
 "rulers": [ 80 ]
 ```
+
+[external configuration]: https://docs.codeclimate.com/v1.0/docs/configuring-the-prepare-step
