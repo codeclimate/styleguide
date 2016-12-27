@@ -122,13 +122,10 @@ Performance/RedundantMerge:
   Enabled: false
 
 ################################################################################
-# Rails - disable things because we're primarily non-rails
+# Rails - disabled because we're primarily non-Rails
 ################################################################################
 
-Rails/Delegate:
-  Enabled: false
-
-Rails/TimeZone:
+Rails:
   Enabled: false
 
 ################################################################################
