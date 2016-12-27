@@ -5,7 +5,9 @@
 Every project should start with the `rubocop.yml` present here. It should
 enforce the styles defined here.
 
-It should be pulled in via [external configuration]:
+It should be pulled in via [external configuration].
+
+### Non-Rails ruby code bases
 
 ```
 prepare:
@@ -28,6 +30,31 @@ inherit_from: base_rubocop.yml
 
 If a change or addition comes up in the course of that project that is not
 project-specific, it should be made in the styleguide.
+
+### Rails code bases
+
+If the project is a Rails app, it should pull in the Rails config file as well:
+
+```
+prepare:
+  fetch:
+  - url: "https://raw.githubusercontent.com/codeclimate/styleguide/master/ruby/rubocop.yml"
+    path: "base_rubocop.yml"
+  - url: "https://raw.githubusercontent.com/codeclimate/styleguide/master/ruby/rails_rubocop.yml"
+    path: "rails_rubocop.yml"
+
+engines:
+  rubocop:
+    enabled: true
+```
+
+And the project should have a `.rubocop.yml` that looks like:
+
+```
+inherit_from: rails_rubocop.yml
+
+# project-specific configuration...
+```
 
 ## General
 
