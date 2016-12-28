@@ -2,3 +2,9 @@ inherit_from: base_rubocop.yml
 
 Rails:
   Enabled: true
+
+# Disabling ActiveRecord-related cops
+Rails/DynamicFindBy:
+  Enabled: false
+Rails/FindBy:
+  Enabled: false
