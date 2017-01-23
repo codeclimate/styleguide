@@ -114,6 +114,11 @@ Style/AlignHash:
 # MultilineMethodCallBraceLayout:
 #   EnforcedStyle: new_line
 
+# We prefer alias_method. This cop's documentation actually indicates that's
+# what it enforces, but it seems to behave exactly the opposite.
+Style/Alias:
+  Enabled: false
+
 ################################################################################
 # Performance
 ################################################################################
