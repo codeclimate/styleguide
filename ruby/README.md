@@ -247,10 +247,41 @@ A developer should be able to view any `it` block in isolation --without its
 DSL methods, it's probably fine.
 
 - Avoid `let`, and `subject` (prefer factory methods)
+- Omit parenthesis with `#to` and `#not_to`
+
+  ```rb
+  # Good
+  expect(x).to eq(y)
+
+  # Bad, interrupts the English "to equal" phrase
+  expect(x).to(eq(y))
+
+  # Bad, doesn't always parse correctly
+  expect(x).to eq y
+  ```
+
 - Place `describe` within the namespace(s) for inner classes
 - Prefer `expect` syntax when possible
+- Prefer predicate matchers when it reads well
+
+  ```rb
+  # Good
+  expect(config).to be_valid_for_analysis
+
+  # Bad
+  expect(config.valid_for_analysis?).to be true
+
+  # But sometimes required
+  expect(presenter.show_the_thing?).to be true
+
+  # Because this doesn't work
+  expect(presenter).to be_show_the_thing
+  ```
+
 - Prefer spies to mocks when possible (mocks put assertion before action)
 - Test only one thing per example in unit specs
+- Use `match_array` when order doesn't matter
+- Use `not_to` (not `to_not`, which creates a split-infinitive)
 - Use a nested `describe` for each method (named as `"#foo"`, or `".foo"`)
 - Write 4-phase tests with whitespace separating each phase
 
