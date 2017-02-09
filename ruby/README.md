@@ -247,7 +247,7 @@ A developer should be able to view any `it` block in isolation --without its
 DSL methods, it's probably fine.
 
 - Avoid `let`, and `subject` (prefer factory methods)
-- Place `describe` within the namespace(s) for inner classes
+- [Fully qualify classname](https://gist.github.com/toddmohney/1c88cbcc5568f919afe21f03c7603057) in top-level `describe` statement
 - Prefer `expect` syntax when possible
 - Prefer spies to mocks when possible (mocks put assertion before action)
 - Test only one thing per example in unit specs
