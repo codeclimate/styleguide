@@ -25,8 +25,8 @@ Use space between neighboring nested blocks, but not before or after.
 
 ```scss
 .btn {
-  font-size: 15px;
   display: inline-block;
+  font-size: 15px;
 
   &:hover {
     box-shadow: 0 5px 7px $box-shadow-color;
@@ -44,8 +44,8 @@ Use space between neighboring nested blocks, but not before or after.
 ```scss
 .btn {
 
-  font-size: 15px;
   display: inline-block;
+  font-size: 15px;
 
   &:hover {
     box-shadow: 0 5px 7px $box-shadow-color;
@@ -63,8 +63,8 @@ Use space between neighboring nested blocks, but not before or after.
 
 ```scss
 .btn {
-  font-size: 15px;
   display: inline-block;
+  font-size: 15px;
   &:hover {
     box-shadow: 0 5px 7px $box-shadow-color;
   }
