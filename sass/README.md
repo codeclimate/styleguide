@@ -16,3 +16,61 @@ Notable exceptions:
 * prefer double quotes
 
 [1]: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+
+## Whitespace
+
+Use space between neighboring nested blocks, but not before or after.
+
+### Good
+
+```scss
+.btn {
+  display: inline-block;
+  font-size: 15px;
+
+  &:hover {
+    box-shadow: 0 5px 7px $box-shadow-color;
+  }
+
+  &:active {
+    box-shadow: 0 1px 3px $box-shadow-color;
+    color: $green-dark;
+  }
+}
+```
+
+### Bad
+
+```scss
+.btn {
+
+  display: inline-block;
+  font-size: 15px;
+
+  &:hover {
+    box-shadow: 0 5px 7px $box-shadow-color;
+  }
+
+  &:active {
+    box-shadow: 0 1px 3px $box-shadow-color;
+    color: $green-dark;
+  }
+
+}
+```
+
+### Bad
+
+```scss
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  &:hover {
+    box-shadow: 0 5px 7px $box-shadow-color;
+  }
+  &:active {
+    box-shadow: 0 1px 3px $box-shadow-color;
+    color: $green-dark;
+  }
+}
+```
