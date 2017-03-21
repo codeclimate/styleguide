@@ -17,7 +17,7 @@ Notable exceptions:
 
 [1]: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
-## whitespace
+## Whitespace
 
 Use space between neighboring nested blocks, but not before or after.
 
