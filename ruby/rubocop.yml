@@ -1,3 +1,13 @@
+###############################################################################
+# Layout
+###############################################################################
+
+# Use empty lines between defs.
+Layout/EmptyLineBetweenDefs:
+  # If `true`, this parameter means that single line method definitions don't
+  # need an empty line between them.
+  AllowAdjacentOneLineDefs: true
+
 ################################################################################
 # Metrics
 ################################################################################
@@ -41,6 +51,9 @@ Style/FileName:
 # We don't (currently) document our code
 Style/Documentation:
   Enabled: false
+
+Style/SingleLineMethods:
+  AllowIfMethodIsEmpty: true
 
 # Always use double-quotes to keep things simple
 Style/StringLiterals:
