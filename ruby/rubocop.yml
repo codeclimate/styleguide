@@ -31,12 +31,16 @@ Metrics/PerceivedComplexity:
 
 ################################################################################
 # Style
-################################################################################
+###############################################################################
 
 # Executables are conventionally named bin/foo-bar
 Style/FileName:
   Exclude:
   - bin/**/*
+
+# Naming format tokens is often less readable, especially with time values.
+Style/FormatStringToken:
+  Enabled: false
 
 # We don't (currently) document our code
 Style/Documentation:
