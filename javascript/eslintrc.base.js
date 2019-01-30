@@ -7,7 +7,7 @@ module.exports = {
     "curly": 2,
     "eqeqeq": [2, "allow-null"],
     "no-shadow-restricted-names": 2,
-    "no-ternary": 2,
+    "no-nested-ternary": 2,
     "no-undef": 2,
     "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
     "no-use-before-define": 2,
