@@ -150,6 +150,10 @@ Style/Alias:
 Style/StderrPuts:
   Enabled: false
 
+Style/MissingElse:
+  Enabled: true
+  EnforcedStyle: case
+
 ################################################################################
 # Performance
 ################################################################################
