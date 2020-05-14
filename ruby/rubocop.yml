@@ -142,6 +142,9 @@ Style/AlignHash:
 # MultilineMethodCallBraceLayout:
 #   EnforcedStyle: new_line
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
 # We prefer alias_method. This cop's documentation actually indicates that's
 # what it enforces, but it seems to behave exactly the opposite.
 Style/Alias:
