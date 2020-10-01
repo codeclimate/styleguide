@@ -33,6 +33,11 @@ Metrics/PerceivedComplexity:
 # Style
 ###############################################################################
 
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  Exclude:
+  - spec/**/*
+
 # Executables are conventionally named bin/foo-bar
 Style/FileName:
   Exclude:
@@ -176,9 +181,5 @@ Rails:
 ################################################################################
 
 Style/ClassAndModuleChildren:
-  Exclude:
-  - spec/**/*
-
-Style/BlockDelimiters:
   Exclude:
   - spec/**/*
