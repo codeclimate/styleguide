@@ -56,6 +56,41 @@ inherit_from: rails_rubocop.yml
 # project-specific configuration...
 ```
 
+## Reek
+
+Every project should start with the `reek.yml` present here. It should
+enforce the styles defined here.
+
+It should be pulled in via [external configuration].
+
+```
+prepare:
+  fetch:
+  - url: "https://raw.githubusercontent.com/codeclimate/styleguide/master/ruby/reek.yml"
+    path: ".reek.yml"
+
+engines:
+  reek:
+    enabled: true
+```
+
+Reek does not support config inheritance, so you will not add a
+project-specific file.
+
+Reek has strong opinions about object-orientation that many find
+overaggressive in some parts of codebases where OO design is less
+important. You may find these common exclusions to be helpful:
+
+```
+engines:
+  reek:
+    enabled: true
+  exclude_paths:
+    - spec/
+    - app/helpers
+    - app/controllers
+```
+
 ## General
 
 - Align `private`, `protected`, etc with other definitions (do not out-dent)
