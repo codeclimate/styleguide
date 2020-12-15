@@ -8,3 +8,6 @@ Rails/DynamicFindBy:
   Enabled: false
 Rails/FindBy:
   Enabled: false
+
+Rails/Present:
+  Enabled: false

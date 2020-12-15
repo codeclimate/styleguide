@@ -1,4 +1,17 @@
 ################################################################################
+# Layout
+################################################################################
+
+Layout/AlignParameters:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+################################################################################
 # Metrics
 ################################################################################
 
@@ -51,9 +64,8 @@ Style/FormatStringToken:
 Style/Documentation:
   Enabled: false
 
-# Always use double-quotes to keep things simple
 Style/StringLiterals:
-  EnforcedStyle: double_quotes
+  Enabled: false
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
@@ -67,6 +79,12 @@ Style/TrailingCommaInArrayLiteral:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
+
+Style/TrailingWhitespace:
+  Enabled: false
+
+Style/YodaConditions:
+  Enabled: false
 
 # We avoid GuardClause because it can result in "suprise return"
 Style/GuardClause:
@@ -120,9 +138,8 @@ Style/Next:
 Style/ModuleFunction:
   Enabled: false
 
-# Disallow extra spacing for token alignment
 Style/ExtraSpacing:
-  AllowForAlignment: false
+  Enabled: false
 
 # and/or in conditionals has no meaningful difference (only gotchas), so we
 # disallow them there. When used for control flow, the difference in precedence
@@ -133,8 +150,8 @@ Style/ExtraSpacing:
 Style/AndOr:
   EnforcedStyle: conditionals
 
-Style/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
+Style/MultilineBlockChain:
+  Enabled: false
 
 Style/MultilineOperationIndentation:
   EnforcedStyle: indented
@@ -146,9 +163,6 @@ Style/AlignHash:
 # https://github.com/bbatsov/rubocop/issues/3462
 # MultilineMethodCallBraceLayout:
 #   EnforcedStyle: new_line
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
 
 # We prefer alias_method. This cop's documentation actually indicates that's
 # what it enforces, but it seems to behave exactly the opposite.
