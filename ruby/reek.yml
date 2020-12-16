@@ -14,6 +14,8 @@ detectors:
     enabled: false
   IrresponsibleModule:
     enabled: false
+  LongParameterList:
+    enabled: false
   NestedIterators:
     enabled: false
   MissingSafeMethod:
