@@ -8,6 +8,8 @@ detectors:
     enabled: false
   DuplicateMethodCall:
     enabled: false
+  FeatureEnvy:
+    enabled: false
   InstanceVariableAssumption:
     enabled: false
   IrresponsibleModule:
