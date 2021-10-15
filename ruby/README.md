@@ -201,7 +201,7 @@ engines:
 - Use `%r{ }` for regular expressions containing more than one `/`
 - Use `%w[ ]` for word-arrays
 - Use `%{ }` for strings containing more than one double quote
-- Use `do`/`end` for multi-line blocks and `{ }` for single-line blocks
+- Use `do`/`end` for procedural blocks and `{ }` for functional blocks, i.e. `{ }` if it returns a value `do`/`end` otherwise
 - Use a trailing comma in all lists
 
   ```rb
