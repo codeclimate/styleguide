@@ -1,5 +1,9 @@
 inherit_from: base_rubocop.yml
 
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 Rails:
   Enabled: true
 
