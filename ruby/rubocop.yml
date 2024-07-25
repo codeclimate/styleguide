@@ -2,7 +2,7 @@
 # Layout
 ################################################################################
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Enabled: false
 
 Layout/EmptyLinesAroundClassBody:
@@ -49,12 +49,12 @@ Metrics/PerceivedComplexity:
 Style/BlockDelimiters:
   EnforcedStyle: semantic
   Exclude:
-  - spec/**/*
+    - spec/**/*
 
 # Executables are conventionally named bin/foo-bar
-Style/FileName:
+Naming/FileName:
   Exclude:
-  - bin/**/*
+    - bin/**/*
 
 # Naming format tokens is often less readable, especially with time values.
 Style/FormatStringToken:
@@ -80,10 +80,7 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
-Style/TrailingWhitespace:
-  Enabled: false
-
-Style/YodaConditions:
+Layout/TrailingWhitespace:
   Enabled: false
 
 # We avoid GuardClause because it can result in "suprise return"
@@ -98,15 +95,15 @@ Style/IfUnlessModifier:
 Style/SignalException:
   EnforcedStyle: only_raise
 
-Style/DotPosition:
+Layout/DotPosition:
   EnforcedStyle: trailing
 
 # Common globals we allow
 Style/GlobalVars:
   AllowedVariables:
-  - "$statsd"
-  - "$mongo"
-  - "$rollout"
+    - "$statsd"
+    - "$mongo"
+    - "$rollout"
 
 # Using english names requires loading an extra module, which is annoying, so
 # we prefer the perl names for consistency.
@@ -114,10 +111,10 @@ Style/SpecialGlobalVars:
   EnforcedStyle: use_perl_names
 
 # We have common cases where has_ and have_ make sense
-Style/PredicateName:
+Naming/PredicateName:
   Enabled: true
-  NamePrefixBlacklist:
-  - is_
+  ForbiddenPrefixes:
+    - is_
 
 # We use %w[ ], not %w( ) because the former looks like an array
 Style/PercentLiteralDelimiters:
@@ -138,7 +135,7 @@ Style/Next:
 Style/ModuleFunction:
   Enabled: false
 
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Enabled: false
 
 # and/or in conditionals has no meaningful difference (only gotchas), so we
@@ -153,10 +150,10 @@ Style/AndOr:
 Style/MultilineBlockChain:
   Enabled: false
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
-Style/AlignHash:
+Layout/AlignHash:
   EnforcedLastArgumentHashStyle: ignore_implicit
 
 # This has the behavior we want, but it has a bug in it which produces a lot of false positives
@@ -196,4 +193,4 @@ Rails:
 
 Style/ClassAndModuleChildren:
   Exclude:
-  - spec/**/*
+    - spec/**/*
