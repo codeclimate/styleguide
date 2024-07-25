@@ -15,7 +15,7 @@ Layout/MultilineMethodCallIndentation:
 # Metrics
 ################################################################################
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/AbcSize:
